@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>!@#$% Livros &*()</title>
+    <style>
+        body {
+            background-color: #F0F;
+            font-family: 'Comic Sans MS', cursive;
+            margin: 0;
+            padding: 0;
+            transform: rotate(0.5deg);
+        }
+        
+        .header-area {
+            background: linear-gradient(to right, #00FF00, #FF00FF, #FFFF00);
+            padding: 2rem 1rem 5rem 3rem;
+            text-align: left;
+            border-bottom: 15px dotted #000;
+        }
+        
+        .site-title {
+            font-size: 3.5rem;
+            color: #000;
+            text-shadow: 3px 3px 0 #FFF, -3px -3px 0 #FFF;
+            transform: skewX(-15deg);
+            display: inline-block;
+        }
+        
+        .navigation {
+            position: absolute;
+            top: 20px;
+            right: 50px;
+            background-color: rgba(255,255,255,0.3);
+            padding: 1rem;
+            border-radius: 50%;
+        }
+        
+        .nav-links {
+            list-style-type: none;
+            writing-mode: vertical-rl;
+        }
+        
+        .nav-links li {
+            margin: 2rem 0;
+        }
+        
+        .nav-links a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            background-color: #FFF;
+            padding: 0.3rem;
+            border: 2px dashed #00F;
+        }
+        
+        .content-zone {
+            display: flex;
+            flex-direction: column-reverse;
+            margin: 2rem;
+        }
+        
+        .book-display {
+            display: grid;
+            grid-template-columns: 1fr 1fr 3fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+        
+        .book-item {
+            background-color: #FFF;
+            padding: 0.5rem;
+            border: 5px solid #0F0;
+            box-shadow: 10px 10px 0 #F00;
+            transform: rotate(2deg);
+            transition: all 0.2s;
+        }
+        
+        .book-item:nth-child(even) {
+            transform: rotate(-1deg);
+            border-color: #00F;
+        }
+        
+        .book-item:hover {
+            transform: scale(1.5) rotate(10deg);
+            z-index: 100;
+        }
+        
+        .book-image {
+            width: 100%;
+            height: 200px;
+            background-color: #000;
+            color: #FFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .book-info {
+            font-size: 0.9rem;
+        }
+        
+        .book-title {
+            font-weight: normal;
+            color: #F0F;
+            margin-bottom: 0.3rem;
+        }
+        
+        .book-author {
+            color: #00F;
+            font-style: italic;
+            margin-bottom: 0.3rem;
+        }
+        
+        .book-price {
+            font-size: 2rem;
+            color: #F00;
+            text-align: right;
+        }
+        
+        .search-section {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: #FF0;
+            padding: 1rem;
+            z-index: 1000;
+        }
+        
+        .search-box {
+            border: 3px ridge #F00;
+            padding: 0.5rem;
+            font-size: 1.5rem;
+            background-color: #000;
+            color: #0F0;
+            width: 300px;
+        }
+        
+        .search-button {
+            background-color: #00F;
+            color: #FFF;
+            border: none;
+            padding: 0.5rem 1rem;
+            margin-left: 0.5rem;
+            cursor: pointer;
+        }
+        
+        .footer-area {
+            background-color: #000;
+            color: #FFF;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+            top: -50px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+            margin: 1rem 0;
+        }
+        
+        .footer-links a {
+            color: #0FF;
+            text-decoration: underline wavy;
+        }
+        
+        .blink {
+            animation: blink 0.5s step-end infinite alternate;
+        }
+        
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            background-color: #FFF;
+            color: #F00;
+            padding: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 15s linear infinite;
+        }
+        
+        @keyframes marquee {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+        
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #FFF;
+            border: 10px double #000;
+            padding: 2rem;
+            z-index: 10000;
+            display: none;
+        }
+        
+        .popup-close {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: #F00;
+            color: #FFF;
+            border: none;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-area">
+        <h1 class="site-title">!@#$% Livros &*()</h1>
+    </div>
+    
+    <div class="navigation">
+        <ul class="nav-links">
+            <li><a href="#">?</a></li>
+            <li><a href="#">!</a></li>
+            <li><a href="#">#</a></li>
+            <li><a href="#">*</a></li>
+        </ul>
+    </div>
+    
+    <div class="content-zone">
+        <div class="marquee">
+            <span>COMPRE AGORA! OFERTA RELÂMPAGO! NÃO PERCA! COMPRE AGORA! OFERTA RELÂMPAGO! NÃO PERCA! COMPRE AGORA! OFERTA RELÂMPAGO! NÃO PERCA!</span>
+        </div>
+        
+        <div class="book-display">
+            <div class="book-item">
+                <div class="book-image">IMAGEM</div>
+                <div class="book-info">
+                    <h3 class="book-title">O Código Da Vinci</h3>
+                    <p class="book-author">Dan Brown</p>
+                    <p class="book-price">R$ 0,99</p>
+                </div>
+            </div>
+            <div class="book-item">
+                <div class="book-image">IMAGEM</div>
+                <div class="book-info">
+                    <h3 class="book-title">1984</h3>
+                    <p class="book-author">George Orwell</p>
+                    <p class="book-price">R$ 999,99</p>
+                </div>
+            </div>
+            <div class="book-item">
+                <div class="book-image">IMAGEM</div>
+                <div class="book-info">
+                    <h3 class="book-title">Dom Casmurro</h3>
+                    <p class="book-author">Machado de Assis</p>
+                    <p class="book-price">R$ 12,34</p>
+                </div>
+            </div>
+            <div class="book-item">
+                <div class="book-image">IMAGEM</div>
+                <div class="book-info">
+                    <h3 class="book-title">A Metamorfose</h3>
+                    <p class="book-author">Franz Kafka</p>
+                    <p class="book-price">R$ 56,78</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="book-display">
+            <div class="book-item">
+                <div class="book-image">IMAGEM</div>
+                <div class="book-info">
+                    <h3 class="book-title">O Pequeno Príncipe</h3>
+                    <p class="book-author">Antoine de Saint-Exupéry</p>
+                    <p class="book-price">R$ 11,11</p>
+                </div>
+            </div>
+            <div class="book-item">
+                <div class="book-image">IMAGEM</div>
+                <div class="book-info">
+                    <h3 class="book-title">A Arte da Guerra</h3>
+                    <p class="book-author">Sun Tzu</p>
+                    <p class="book-price">R$ 22,22</p>
+                </div>
+            </div>
+            <div class="book-item">
+                <div class="book-image">IMAGEM</div>
+                <div class="book-info">
+                    <h3 class="book-title">O Senhor dos Anéis</h3>
+                    <p class="book-author">J.R.R. Tolkien</p>
+                    <p class="book-price">R$ 33,33</p>
+                </div>
+            </div>
+            <div class="book-item">
+                <div class="book-image">IMAGEM</div>
+                <div class="book-info">
+                    <h3 class="book-title">Cem Anos de Solidão</h3>
+                    <p class="book-author">Gabriel García Márquez</p>
+                    <p class="book-price">R$ 44,44</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="search-section">
+        <input type="text" class="search-box" placeholder="O que você NÃO quer?">
+        <button class="search-button">Ir</button>
+    </div>
+    
+    <div class="footer-area">
+        <p class="blink">ATENÇÃO: Este site pode conter elementos perturbadores</p>
+        <ul class="footer-links">
+            <li><a href="#">Contate-nos (não recomendado)</a></li>
+            <li><a href="#">Termos (que você nunca lerá)</a></li>
+            <li><a href="#">Privacidade (inexistente)</a></li>
+        </ul>
+        <p>© 2023 !@#$% Livros &*() - Todos os direitos talvez reservados</p>
+    </div>
+    
+    <div class="popup" id="popup">
+        <button class="popup-close" onclick="closePopup()">X</button>
+        <h2>PROMOÇÃO ESPECIAL!</h2>
+        <p>Você foi selecionado para uma oferta exclusiva!</p>
+        <p>Clique AGORA para ganhar 100% de desconto*</p>
+        <p><small>*Desconto aplicado apenas na nona compra</small></p>
+    </div>
+
+    <script>
+        // Funções para tornar a experiência mais confusa
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mostra popup aleatoriamente
+            setTimeout(function() {
+                document.getElementById('popup').style.display = 'block';
+            }, 3000);
+            
+            // Muda cores aleatoriamente
+            setInterval(function() {
+                document.body.style.backgroundColor = getRandomColor();
+            }, 5000);
+            
+            // Move elementos aleatoriamente
+            const items = document.querySelectorAll('.book-item');
+            items.forEach(item => {
+                setInterval(function() {
+                    item.style.marginLeft = Math.random() * 100 - 50 + 'px';
+                    item.style.marginTop = Math.random() * 20 - 10 + 'px';
+                }, 2000);
+            });
+            
+            // Efeito de cursor estranho
+            document.body.style.cursor = 'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'48\' viewport=\'0 0 100 100\' style=\'fill:black;font-size:24px;\'><text y=\'50%\'>?</text></svg>"), auto';
+            
+            // Barra de busca inútil
+            const searchButton = document.querySelector('.search-button');
+            searchButton.addEventListener('click', function() {
+                alert('Busca não disponível. Tente novamente nunca.');
+            });
+        });
+        
+        function closePopua() {
+            document.getElementById('popup').style.display = 'none';
+            // Abre outro popup depois de um tempo
+            setTimeout(function() {
+                document.getElementById('popup').style.display = 'block';
+            }, 10000);
+        }
+        
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        
+        // Impede o usuário de sair do site facilmente
+        window.onbeforeunload = function() {
+            return "Tem certeza que quer sair? Você vai perder ofertas incríveis!";
+        };
+    </script>
+</body>
+</html>
