@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Livraria XYZ - Sua livraria online com os melhores títulos e ofertas exclusivas"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Livraria XYZ - Sua Livraria Online Premium</title>
+  </head>
+  <body>
+    <header class="sticky-header">
+      <nav>
+        <div class="logo">
+          <i class="fas fa-book-open"></i>
+          <span>Livraria<span class="logo-highlight">XYZ</span></span>
+          <button id="theme-toggle" aria-label="Alternar tema">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#inicio" class="nav-link active">Início</a></li>
+          <li><a href="#categorias" class="nav-link">Categorias</a></li>
+          <li><a href="#lancamentos" class="nav-link">Lançamentos</a></li>
+          <li><a href="#ofertas" class="nav-link">Ofertas</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+          <li>
+            <a href="#" class="nav-icon" aria-label="Carrinho">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-icon" aria-label="Pesquisar">
+              <i class="fas fa-search"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="hamburger" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section id="inicio" class="hero">
+        <div class="hero-content">
+          <h1>
+            Encontre sua próxima
+            <span class="highlight">aventura literária</span>
+          </h1>
+          <p class="hero-text">
+            Milhares de títulos para todos os gostos. Frete grátis para compras
+            acima de R$ 99,90.
+          </p>
+          <div class="hero-buttons">
+            <a href="#ofertas" class="btn btn-primary pulse">Ver Ofertas</a>
+            <a href="#" class="btn btn-secondary">Assinar Clube do Livro</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            alt="Pilha de livros coloridos"
+          />
+        </div>
+      </section>
+
+      <section id="categorias" class="categories-section">
+        <h2 class="section-title">Explore por <span>Categorias</span></h2>
+        <div class="categories-grid">
+          <div class="category-card" data-category="ficcao">
+            <i class="fas fa-rocket"></i>
+            <h3>Ficção Científica</h3>
+          </div>
+          <div class="category-card" data-category="fantasia">
+            <i class="fas fa-dragon"></i>
+            <h3>Fantasia</h3>
+          </div>
+          <div class="category-card" data-category="romance">
+            <i class="fas fa-heart"></i>
+            <h3>Romance</h3>
+          </div>
+          <div class="category-card" data-category="negocios">
+            <i class="fas fa-chart-line"></i>
+            <h3>Negócios</h3>
+          </div>
+          <div class="category-card" data-category="biografias">
+            <i class="fas fa-user-tie"></i>
+            <h3>Biografias</h3>
+          </div>
+          <div class="category-card" data-category="infantil">
+            <i class="fas fa-child"></i>
+            <h3>Infantil</h3>
+          </div>
+        </div>
+      </section>
+
+      <section id="lancamentos">
+        <div class="section-header">
+          <h2 class="section-title">Novos <span>Lançamentos</span></h2>
+          <a href="#" class="view-all">Ver todos</a>
+        </div>
+        <div class="books-grid">
+          <div class="book-card">
+            <div class="book-cover">
+              <img
+                src="https://m.media-amazon.com/images/I/81iqZ2HHD-L._AC_UF1000,1000_QL80_.jpg"
+                alt="Capa do Livro O Nome do Vento"
+              />
+              <div class="book-badge new">Novo</div>
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">O Nome do Vento</h3>
+              <p class="book-author">Patrick Rothfuss</p>
+              <div class="book-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(4.7)</span>
+              </div>
+              <p class="book-price">R$ 49,90</p>
+              <button class="book-btn add-to-cart">
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-cover">
+              <img
+                src="https://m.media-amazon.com/images/I/81dQwQlmAXL._AC_UF1000,1000_QL80_.jpg"
+                alt="Capa do Livro Cem Anos de Solidão"
+              />
+              <div class="book-badge bestseller">Bestseller</div>
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">Cem Anos de Solidão</h3>
+              <p class="book-author">Gabriel García Márquez</p>
+              <div class="book-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(5.0)</span>
+              </div>
+              <p class="book-price">R$ 39,90</p>
+              <button class="book-btn add-to-cart">
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-cover">
+              <img
+                src="https://m.media-amazon.com/images/I/71kxa1-0mfL._AC_UF1000,1000_QL80_.jpg"
+                alt="Capa do Livro 1984"
+              />
+              <div class="book-badge classic">Clássico</div>
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">1984</h3>
+              <p class="book-author">George Orwell</p>
+              <div class="book-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(4.9)</span>
+              </div>
+              <p class="book-price">R$ 29,90</p>
+              <button class="book-btn add-to-cart">
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-cover">
+              <img
+                src="https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg"
+                alt="Capa do Livro O Hobbit"
+              />
+              <div class="book-badge classic">Clássico</div>
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">O Hobbit</h3>
+              <p class="book-author">J.R.R. Tolkien</p>
+              <div class="book-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(4.8)</span>
+              </div>
+              <p class="book-price">R$ 45,90</p>
+              <button class="book-btn add-to-cart">
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ofertas" class="featured-offers">
+        <div class="section-header">
+          <h2 class="section-title">Ofertas <span>Especiais</span></h2>
+          <div class="offer-timer">
+            <i class="fas fa-clock"></i>
+            <span id="countdown">05:00:00</span>
+          </div>
+        </div>
+        <div class="offers-grid">
+          <div class="offer-card">
+            <div class="offer-badge">-30%</div>
+            <div class="book-cover">
+              <img
+                src="https://m.media-amazon.com/images/I/81a5KHEkwQL._AC_UF1000,1000_QL80_.jpg"
+                alt="Capa do Livro A Revolução dos Bichos"
+              />
+            </div>
+            <div class="offer-info">
+              <h3 class="book-title">A Revolução dos Bichos</h3>
+              <p class="book-author">George Orwell</p>
+              <div class="price-container">
+                <p class="old-price">R$ 35,90</p>
+                <p class="book-price">R$ 24,90</p>
+              </div>
+              <button class="book-btn offer-btn">Comprar Oferta</button>
+            </div>
+          </div>
+          <div class="offer-card">
+            <div class="offer-badge">-40%</div>
+            <div class="book-cover">
+              <img
+                src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAPEBUQEBAVFhUWFRUVFxUYFhYWFxgWFxYWGBcWFhcYHSggGB0lGxUYITEhJSkrLi4uFyAzODMtNygtLisBCgoKDg0OGBAQGjAlHR4rMi4rLS0tLisrKy01LS8uLS0rLS0vLS0tLS4tLS0rLS0tLy0tLS0tLS0tLSstKystLf/AABEIARAAuQMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAAAwUCBAYHAQj/xAA+EAABBAECAwYEAgkCBgMAAAABAAIDEQQSIQUxQQYTIlFhcRQygZEjoQcVQlKCscHR8DNiJXKSwuHxFjRT/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAEDAgQF/8QAKREBAAICAQQCAQIHAAAAAAAAAAECAxFRBBIhMRNBBSJxFGGhscHR8P/aAAwDAQACEQMRAD8A9vX1EUBERARFF8Qzfxt2cGncbOPJvvuNvVNJMxHtKi1/jodQZ3rNR5N1CzuRsL8wfskebE4W2VhF1s4Herr3oK9s8J315bCLXfmxNFulYBtuXADcEje+oB+yyly42Vqka3V8tuAvlyvnzH3Ttk7q8pkUTcqMuLA9pcObQ4ah7jn1XxuXGdVSN8HzeIeGuery5JqV7o5TIozOywNbbNULG93X3o/ZYDNiLg0Ss1Hk3ULPsLTUndHKdFA7MiDi0yMBG5BcLAq7I6bLI5DN/G3a73G1c79rH3TUndHKVFA7MiGq5GeH5vENvfyXyPOidpqRviFtGoWfYJ2zwnfXlsIsGStd8rgdr2IO3n7LNR0IiICIiAiIgIiICoGdnTTg+XUHua940geNrnEltcvm62RpG+yv0XdbzX0zyYqZNd30qMfgxaGB0motZMwuqiTK4O1ehFH7qAcCeaLpG2Axo0s0jSxkjQSL5/iflSvkV+Wzj+Gx8OcPZpwADJRQcwgEOFBsb2loLXAgW8kb7DZb3EeGPlDKe0ERyRutpcCH6LI8WxGjrfNWqJOW29pHTY4iYiPEqvh/DHQyvfrBa69vHY2aP3tP7POrWr+oX+NveNDXkWA0nw6y9w8RNXdUNtyaV8ifLbe1np8cxrXP9VAOzziGh8thojaDVOqPvdBv94a2m/Nq2cPhDmd3cm7IXRlzWgHU5zTrF2B8vI3zVsiTltJXpsdZ3EKUcHkEkrw9p7wH5g4792xluaCGu+W+Q50oD2eeIhE2RtaJYiS02WSOa7UaO79ufW7XQor81knpcfH/AHtQz9ntTXnX43PLgTekNMzZS2hvZ0gX9l9dwJziHF4sCIULIPdyuebJ3Ng/dXqJ81+T+FxcNHh3DhC6Vwrxv1D/AGtq9PtqL3fxFbyIs5mZnctq1isagREUdCIiAiLQ4nxnHxb76VrSIpZqJ3McQBkcB1oOH3Qb6Lhuxv6Qv1hkDHmw34xki7/GL3BwmhsjVsBpNC632vy36zjXFIsPHkyZ3aY42lzj19AB1JNADzKDdRcBjdq+MyQ/HN4XF8MW942IzkZRi56w3Tpst3Dea7Lg3E4szHjyYHXHK0PaeRo9COhB2Psg3UREBERAREQERcdP24dLPLBw7BkzO4OmWRskcUTX7+Br3nxuFbgfdB2KKl7L9pIuIMeWMfHJE8xzQyCpI3jo4ciD0I2P3V0gIiICIiCOadrPmNf56L7FK14tpsKtzmPMh0MceW9bD78//a2+H43dso8ySfv5+vX6rwYeoz36m+O1NUj1PLuax2722kRF73AvKeO8Kdxji/Esdkugw4EWMwkW1rpnCVxr1aC0kdHFerLzrsq7u+0nFY3bGSLGlb6taxrSfu8BBqdtcb4HI4DIKDopm4pr92RjGEfkfuux7c9mm8VwZMN0hZq0ua4cg5ptuodW3zC5X9LgMmTwiBvzOz2v+kZZq/Jy9JKDyKftF3GbxjPfrczCijw4Im6tALr+YDYDvGjxHkD7Lsv0W8Kkw+E40MwIfoL3NPNvePc8NPlQcBS5jsZmtgyu0EjmhwjmdKQeRDWzOr8lT9nOKSYUkec/IllfNwzIz8pjpC5hPeN7nSw7M3OgV0BCD2pF5j2MY6DMxJczIyZsviGPLKW6x8NE3wSBoj6UKaKvmVSz8Uyf1TO8Tya/10WB2t1hnfN8IN/L6ckHtCLyf9JubNkZOTAzKlgjwcB2V+E8sL8hx/Ca4jctArbzK1f0i8Zz5saLHgmdE+DBbnZj2lzHXTWxx6m8iXa3aetA9EHsSLyPsfiZuLxbD77Pmn+Lwnzzse4lrX0CNLeQAJaBt0PQ0o8vtZxOKDI4vD+Jjt4g6N0RcNLcSEGIabFgve6yRdEA0RaD1nPhfJFIyN+h7mOa19XpcWkB1daJuvReV5nD8ng+Dw7hOPP3c+VmVLPH8xaH6nubY50YxuNwKOxXpfAMnImx2SZUAhldZdFqDtA1HSC4czpq/wCi4r9I7v8Ai/BB55E5+wh/ugh/RnknL4rxbOYx7YXPhhGoFpL4WljraeRoAkHcd4F6PkTCNjnu5NaXH2As/wAlwP6RsSWTL4djYmS7GkklyZS+PkNEVukeywH7kCz+8Vyk3Gc93ZfMzJcx8hlm0wyUGO7nvmQu5VpDqft0soPXOz/Fm52NHlMjkYyRupokADi08nUCdiNx6FWK80/SJxfOEONhYMpjlfjyZM0oNObDBEHEAgWC91Cx18gSua7LcY4w3N4Xk5WaZIuId63ueTWsjaAHFvIONh1t8jfNB7gqiHtBG7Pfw8RSh7IWzGQs/CLXGqDup3/I+RXCcUn4rxnLzI+HZ3wsWE4RNof604svD3DdrQRXIjlsd1bYnFMtnGJsWTIL2RcNjkrS0NMwdTpdIGxO+3LdB3iLxLgHHuOR42DxTIzGyY8s7IHwFjdRjkkczvXOA+a+Vf7fULf7edpc10vEJMbMdjxcNGOA1oae/mlO4eTzAG2lB68i1+HyufDG94pzmMc4eTi0Ej7rYQF5z29xsjA4jj8bxoHTNbGcfKiYLeYiba9rRzok/wDS3pZHoyIPOeDF/GuLR8RMEsWLhxubB3rND5Z5PneG/utbQ9wPWut7W8akwMY5LMZ+Rpc0OjYfHpca1NFHVRIsbbWeiuUQeN9kjkMxuJ8QysDI/wCISljMeNhdLTxIOTgCG2/TqIHK6VDwLBz48TK4XJw3KfmzxsgEr9Igjx422xok+UAW7YXZIF7Uv0EiDwTE7azDM4eX4E7ciDFlxWxOYWibIIYxukncNtoLj0v6rSlmz48CfAfw/IfNDn/FzStYe60h4Pg2t2p3Kh8pvoV6pxbEc/tBhSGMljMTJ8eklrXlzRz5A0fzXaIPz72nysqbNbxSfh2S3ByO7jfAADJM2Ah8YkbXgDpGsNdQ00V1vFOF5P6k4jm5MRGVmtD3RAFxjiaWthh8/CyyfVxXqi+oPIeMZWZhcVwZocKScv4WzGjaLDRMXknW6vCANN3WxVJw05jYZOzM+M8zS5TXGZo/B+HdIyWWSz0prq2/arYil7yiAV45mdohxnj2DHBjzMGA+d05kDQWmm6rDSQBcYAJO5cvY18awAkgAXz9fdB5hwbiEvHMybPhhkjgx8OXGx+8ADpJ5d3uFHYABo+o9hwmdx3Iyez36uh4fMBjBvxMrhTGaJL8I5lxdRdsNIBO/NfosBfKQeV8HmPEY+I8WbG9sXwDsTFDxTi1kTnyuAHQyUBXPSuf4hnHCxuzucYXyRwxyhwYLOp7Iw0C9rNEjz0le6BoAoDbyWizPBcGaP2y27GnY1t6+izyZqY5iLTrc6j91iJl5B2b7Xv4FLlDiWDPH8ZKcyEMDX7y2TESSNxYHmCDYG118Pa7LxeKT5nEcOUSZmHWPjxjU4MLvwmG6PJpLjV73pF0PfXNB5gGt1Flw62u2BdpcAfcVz6LRHgTu0sTeH8H4eY5Xlr48uRsbNTnsY+Uxxxg/MXOBuuWlfMk/D8Ufkcchnx8XIkbmNhaO9Y+VliJkrm9WgklvmRey9f/AEecJkxOG4sORGGzRx6XDwkttzjWoX59CujcwHmAffdBBw3LE8MczWuaJGNeGuFOAcAQHDoaPJbKIgIixEjb02LAsi9686QZIiINTik7o4y9paCC35uRBcAR9iVDwviXfOe06AWkUGu1W0geLkOtj6KwPmV8ZG1vygCyTsK3Jsn6lZTS/wAkWi36dev87XcaZIgKLVBERAREQEREBERAIWri4EcROhtcqHlXl78ytpFzNazMTMegREXQIiICIiAqnL4L3jnuEpbrN7NF2QwHxcyKYCBY33N0ALZEFTFwQMEgE0lyAgknVVhu4B9if43LXg7PyMd/9qSg2MXuXHQTZJJqz4RdchW/NXyIOf8A/jALAx2RKfmvc7g34avkLI67EjqtnD4IY5NffyO3kNH/AHgCudDlew5+Q2VuiCnwOBdySRM821zfq6/FuT5377+ihZ2cpgYciQhuoj0LtrG/IDYDpur5EGpw3BEDSNTnWQST/wAoFDyG2w9VtoiAiIgIiICIiAiKOeUMa57uTQSeuwSZ15kSIqt3HYR0eRbRqDbb4q3B5UL3+qso5A4BzTYIBB9Cs6ZaX32zE6WYmPbJERaIIiICIiAiIgLVnzQ06QC4jn0A9ytpUpG7vPU6/uf6L4/5nr8nSYYtjjzM6/ZpjpFp8rCDOa52kgtJ5XVH2I/kVtKjkfpF9dq972/OleLn8L+RydZjtOSPNZ98rkpFZ8CIi+0yEREBERAREQFS9p5pGMZoaSNW4DmjVts12ofLzJI38KulV9osQyw01uqnB2nqQL5eu6x6is2xWiOHePXdG1Q3iZb/AKrBpv52mxV7EjpzH5q04DJZlDT+GHUNttR3fTuu55dPPoObx4u+d3A1N7xvd7g+ANab2PMgWNuZpdpg4jII2xRtprQGj6ADc9TQ5r5H43oYpknLE6j1rl6ep1XxynREX3XjEREBERAREQFrZGGHmwS0+Yrf3BWw5wAsmh5rF0zQQ0uFu5C9zte30CyzYseWvZkiJifqViZj014MENNuOojl0H2W2iJhwY8Ne3HWIj+RMzPsRYuF7LGF92Oddf7+q02iRERUEVJlx5BeXNY8Fx/Zc2tDa2dZoOIuj5n0V2FljyTeZiazGp+/v9lmBERaoKr4zlsjLdTt2tkl02NTgxtGhzNa1aLlu3bBojPdazZAAA1G3Rimk8jufssepnWOZaYq91ohp8E4HBjSOmY95e0uZqcTW7ttOry+XbY9d11uHkaxRrUOdcvQj0P9x0XDM45E+J8MpkimNu7uS4zdg/hn3FjqTdLouy8H+pIXOO4YAXOcAANR2J83c/RfP6PJb5e36lrlre0Te8r9ERfWeYREQEREBERBDmNcWOazmRQ9L2v6c/otLDwHskvwhoHQfNd6rv5dw3z/ADVmiwydPS965Le6+li0xGhERbo+FQzNI8befUeY8lOojIAaP09f/KkjON4cARyKyVe2XupKd8j+R8nevuP5KwSJBERUEREBU/aCAufjkC6m335N0OdfruwK4VfmvuUN6NaSfdxpv5Nd9wsOpmIxW26rOpU/H2RuY1rw0+MOFgGgzxFw+wH1VzwKENgaR+2O8P8AEAQPoKH0VKcBuREx0hdZabojdr6cWGxsOXKjsr7hbriHoXD6BxA/Kl8/8fr5J3700vf9EVhtoq6HimqbuSwg1dEtsVZcXAHkAY+Vn8QXSsV9aJ2ymNCL4HA2ARtz9F9VQREQEREBERAREQFhLGHCiLH+brNEFflY5qneJvmeh8j78lBNlnQGucRpdpedwdNHS4noDQGrlzVsRarclml4NU4WGu6G99LvQ1X+BY5cffSaxOt/ZE6l94bLqeQx2pmmyb1AOugAfUXt6eqsljE4FoI5EWPqsk6fFOLHFJnevtZncips7MyRksZGz8KwHOI53psAkjkCfsefJWmTksibqe4NHmf5DzKpeJZ8k0bmwUw9HvGohw3aQ0GhuAbJ+i0tK1XxIAs8lxcPa/Dd3ju/t2p2rS17mivCGh7WlpoACwau1Y5RDvnGr/m8Q+x5Ku+GBaWgaRzFUOtiunTkvPnp8sadxTS3x2lsbGno1oPuAF9x+Kxw62PdTtQLRTqOsBrdwKHitczicR4gZnh7Y+5bsHuae8ceuzSGgX1/JbbWFzjJLTiabQbTQGlxGxJ38R39l4um6fJjy90+jtdVBl4zQS2WPfxOOpoJNAaneZoDc+ireMdoWs0xxXbzWqiANiSG3zdpBPlsq2DuxsI2je/lCxnxWvc15Jtt17EVS+l3yRRs9nspjcggnTqbtZO7yeQs8zpJ8zud11a4WRndB7umphB51W5PoNvzK7L4+L/9G/dWlvCXjy2ERFozEREBERAREQERaMmeQXNDLIcGto8ya2PlufVZ5M1Meu+db8LETLeUc8IeKP3HMeyzC+rRFDncZ+DkZC6KSTXbgYwCGgHcv1EVZOwF8j6BQ5fahkgczDc10jTTi9rw1hFHS4bOsg/T15LS47nA5zoiCC2Jmkn5XWdTg3zItl+4WlDEA/vAN+RI5keo61/dZzZpFY0jONk5Lg/JlAIALmNsb+j72bz2aBfUlXmNE1raZQHQBQRsoaelbenoFuYzK+y4mXYWg7KCVoG4Ww9gu79Fr0NwoNeRhPJYBppTHnS+3YRWUMW3JR5DQFNBJQ3UUrwoInPFUVr/AA7fL8z/AHUpasdJQdui+L6vS84iIgIiICIiAtVvD4gQdPLfezvd2b5m+vqVtIuZrWfcAtbiWY2CJ8rhYaLocyeQaL6kkD6rZXM9rshr6gItta3/APY3+v0CszpYjcudax+RJ8W8UXWSzUXCtg1zbAqmg0RVg7q0hi0n/Pup8eEFjSP3a9a8lLoCxmWzFjd/YLbYFBGzqtkBQQGSysGMonyUhb6Kkb2gY6cwsDXHUGtcJBpOzibIBpwLHDSLPhs1sirSQf2WAGyzieJAehDi1w8iP/YP1WT9ggge3n0UIG/1Ut7KNrtlB9jG9rZsLW1eq+d4oO0REXqecREQEREBERAREQRzyhjXPPJoJPsBa4jMk1Audu5zrcffp7AUB6ALquPS6YHD94hv3O/5WuQyd3UDzPRZ3n6aUha4TrH+eSkdseSiYC0eqkJ3A9PzXDtM0bXSlHJQtKnBXI+Abbqs+GjjkLmRta4tDSQ0C2guIG3S3O+5Vq/ktOVvVIWEMDAL0irJP1O5KleNqWQbS+vHkg1tNDcdVGGm/wDOi2gywQfusBFt/VQazQLU1jyUU7aWtqKiu8REXreYREQEREBERAXwml9WErNQrl5H1UFT2mrQwH94u+zSP+5c1jOtwPUD8yrDtLxdrXRxSU2WnEtvm00A9p6tsfSt1U8Jy2SukDHA6dO43HiF8/v9lnb21r6XZNgqHvbO45LBrnC/tuonEl2y5dLJr7WyQtdreS2CFyDjsoaU6jcitPibniN5j+cNJbtqF1tsCL9rXL9n35r5rla9oJ1Sjag8wR006idLLsgMJo8z0XYvj2Uce1BQiWcDabvzWEjeSnNAWo3qDUm9VBY8lNMbUd+n5KK7NEUMsTjykc32DT/MFet50pK/PnCu2E5423iDnzfDTZr8cXr+H7ogRxkOPh1DZxA8rXtbnPdOccZUodo13pho0Rqbuy7Aew/x+hWqC4xumGdOWNYJNmY3iYQSHNGi6IHWim54dRWOf7/6dGipg9zZxjnKlLy0OHghqjq8mWPkO/LkOou0iicOb3O9w0fyARJiI+2vnZnduaBXJxIJrYV1+/2Wxiy62Ncasjeuh6jdYy4rHEOI3BBvqdN0D6blTrKlbxe02nxPqOEnWhRZAeaDDV8zV0KO4HmpUWyOM7R8IZJKXyRl7WhrNTzdvcHknn4QBpAAofiHbyrOF4UUF6IwwkAEDYEi62+q7zMww+N7P3t78nbEH7gLjMgU/Y8wFlbw0rLcbPYHmvl36eigLbH9VCA4HnsuHS10OIsHyW4D6qtx8px8JW/fJRUtqNzlk4rBzgoMXbi+W6jd4d1JeywL+hCK+Qu2X2U3sjRtsteWXouR8nI6KLvh6fmopZLK+I6d0i+L6vW8qH4Vlh2gWCXA9QXCiR7hYDAh0ub3baeKcK2I32PpudvUrZRUQuxoy/vCwaxVOrfbVW/8Tv8AqPmpkRAREQfNQX0FVPEMN0j92W11N58gLJLh1Hp7ClZwg6Rqq6F1yv09FjiyWta0TXURPieVmGa5Dj+GWT2Pld4h6G/EPuQf4vRdeqbtPEXRtoCw7UPM7G2j3H50uslorXcrX2pMcXt5LHNYFBBOKsEelLZLDIPXzWbV9w2Gg49P/Csoztuq1gcw1Sma83v5KSNlr9yteQV157JJID1tfG7mworMPJIWUthfAACs9WrekHwu2WpIN7W040Ba03ynehf3XKw1pm72ni8lk4uNbL7oPqor/9k="
+                alt="Capa do Livro O Pequeno Príncipe"
+              />
+            </div>
+            <div class="offer-info">
+              <h3 class="book-title">O Pequeno Príncipe</h3>
+              <p class="book-author">Antoine de Saint-Exupéry</p>
+              <div class="price-container">
+                <p class="old-price">R$ 32,90</p>
+                <p class="book-price">R$ 19,90</p>
+              </div>
+              <button class="book-btn offer-btn">Comprar Oferta</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter">
+        <div class="newsletter-content">
+          <h3>Assine nossa <span>newsletter</span></h3>
+          <p>
+            Receba atualizações sobre lançamentos, promoções e conteúdos
+            exclusivos diretamente no seu e-mail.
+          </p>
+          <form class="newsletter-form">
+            <div class="input-group">
+              <input type="email" placeholder="Seu melhor e-mail" required />
+              <button type="submit" class="newsletter-btn">
+                <i class="fas fa-paper-plane"></i> Assinar
+              </button>
+            </div>
+            <div class="newsletter-checkbox">
+              <input type="checkbox" id="agree-terms" required />
+              <label for="agree-terms">Concordo em receber comunicações</label>
+            </div>
+          </form>
+        </div>
+        <div class="newsletter-image">
+          <img
+            src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            alt="Mulher lendo livro"
+          />
+        </div>
+      </section>
+
+      <section id="mais-vendidos">
+        <div class="section-header">
+          <h2 class="section-title">Mais <span>Vendidos</span></h2>
+          <a href="#" class="view-all">Ver todos</a>
+        </div>
+        <div class="books-grid">
+          <div class="book-card">
+            <div class="book-cover">
+              <img
+                src="https://m.media-amazon.com/images/I/81a5KHEkwQL._AC_UF1000,1000_QL80_.jpg"
+                alt="Capa do Livro A Revolução dos Bichos"
+              />
+              <div class="book-badge bestseller">Top 1</div>
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">A Revolução dos Bichos</h3>
+              <p class="book-author">George Orwell</p>
+              <div class="book-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(4.5)</span>
+              </div>
+              <p class="book-price">R$ 24,90</p>
+              <button class="book-btn add-to-cart">
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-cover">
+              <img
+                              src="data:image/jpeg;base64,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"
+                alt="Capa do Livro O Pequeno Príncipe"
+              />
+              <div class="book-badge bestseller">Top 2</div>
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">O Pequeno Príncipe</h3>
+              <p class="book-author">Antoine de Saint-Exupéry</p>
+              <div class="book-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(4.9)</span>
+              </div>
+              <p class="book-price">R$ 19,90</p>
+              <button class="book-btn add-to-cart">
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-cover">
+              <img
+                src="data:image/jpeg;base64,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"
+                alt="Capa do Livro Dom Quixote"
+              />
+              <div class="book-badge classic">Clássico</div>
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">Dom Quixote</h3>
+              <p class="book-author">Miguel de Cervantes</p>
+              <div class="book-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span>(4.2)</span>
+              </div>
+              <p class="book-price">R$ 59,90</p>
+              <button class="book-btn add-to-cart">
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-cover">
+              <img
+                src="https://m.media-amazon.com/images/I/71-++hbbERL._AC_UF1000,1000_QL80_.jpg"
+                alt="Capa do Livro Harry Potter e a Pedra Filosofal"
+              />
+              <div class="book-badge bestseller">Top 3</div>
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">Harry Potter e a Pedra Filosofal</h3>
+              <p class="book-author">J.K. Rowling</p>
+              <div class="book-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(4.8)</span>
+              </div>
+              <p class="book-price">R$ 34,90</p>
+              <button class="book-btn add-to-cart">
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="contact-section">
+        <div class="contact-content">
+          <h2>Entre em <span>contato</span> conosco</h2>
+          <p>Tem dúvidas ou sugestões? Envie-nos uma mensagem!</p>
+
+          <form class="contact-form">
+            <div class="form-group dual-input">
+              <div class="input-field">
+                <label for="nome">Nome</label>
+                <input
+                  id="nome"
+                  type="text"
+                  placeholder="Ex: Victor"
+                  required
+                />
+              </div>
+              <div class="input-field">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Ex: email@seuemail.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="assunto">Assunto</label>
+              <input
+                id="assunto"
+                type="text"
+                placeholder="Qual o assunto?"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-form">
+              <i class="fas fa-paper-plane"></i> ENVIAR MENSAGEM
+            </button>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <div class="info-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Endereço</h3>
+            <p>Rua dos Livros, 123<br />Recife- PE</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-phone-alt"></i>
+            <h3>Telefone</h3>
+            <p>(81) 1234-5678</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <p>contato@livrariaxyz.com.br</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-clock"></i>
+            <h3>Horário de Funcionamento</h3>
+            <p>Seg-Sex: 9h-18h<br />Sáb: 9h-13h</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-main">
+          <div class="footer-column">
+            <div class="logo"><span>Livraria XYZ</span></div>
+            <p class="footer-about">
+              Somos uma livraria apaixonada por conectar leitores a histórias
+              incríveis desde 2010.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Pinterest"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h4>Navegação</h4>
+            <ul class="footer-links">
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#categorias">Categorias</a></li>
+              <li><a href="#lancamentos">Lançamentos</a></li>
+              <li><a href="#ofertas">Ofertas</a></li>
+              <li><a href="#mais-vendidos">Mais Vendidos</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Ajuda</h4>
+            <ul class="footer-links">
+              <li><a href="#">Dúvidas Frequentes</a></li>
+              <li><a href="#">Entregas e Prazos</a></li>
+              <li><a href="#">Trocas e Devoluções</a></li>
+              <li><a href="#">Política de Privacidade</a></li>
+              <li><a href="#">Termos de Serviço</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Contato</h4>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Rua dos Livros, 123 - PE
+              </li>
+              <li><i class="fas fa-phone-alt"></i> (81) 1234-5678</li>
+              <li>
+                <i class="fas fa-envelope"></i> contato@livrariaxyz.com.br
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="payment-methods">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-amex"></i>
+            <i class="fab fa-cc-paypal"></i>
+            <i class="fas fa-barcode"></i>
+          </div>
+          <div class="copyright">
+            <p>© 2025 Livraria XYZ - Todos os direitos reservados</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="cart-sidebar">
+      <div class="cart-header">
+        <h3>Seu Carrinho</h3>
+        <button class="close-cart">&times;</button>
+      </div>
+      <div class="cart-items">
+        <!-- Itens serão adicionados dinamicamente via JS -->
+      </div>
+      <div class="cart-total">
+        <p>Total: <span>R$ 0,00</span></p>
+        <button class="checkout-btn">Finalizar Compra</button>
+      </div>
+    </div>
+    <div class="overlay"></div>
+
+    <button class="back-to-top" aria-label="Voltar ao topo">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="index.js"></script>
+  </body>
+</html>

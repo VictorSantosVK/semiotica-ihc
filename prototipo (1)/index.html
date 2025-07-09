@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Livraria XYZ - Sua Livraria Online</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Livraria<span>XYZ</span></div>
+        <ul class="nav-links">
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Categorias</a></li>
+          <li><a href="#">Lançamentos</a></li>
+          <li><a href="#">Ofertas</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section class="hero">
+        <h1>Encontre sua próxima aventura literária</h1>
+        <p>
+          Milhares de títulos para todos os gostos. Frete grátis para compras
+          acima de R$ 99,90.
+        </p>
+        <a href="#" class="btn">Ver Ofertas</a>
+        <a href="#" class="btn btn-secondary">Assinar Clube do Livro</a>
+      </section>
+
+      <section>
+        <h2 class="section-title">Lançamentos</h2>
+        <div class="books-grid">
+          <div class="book-card">
+            <div class="book-cover">Capa do Livro</div>
+            <div class="book-info">
+              <h3 class="book-title">O Nome do Vento</h3>
+              <p class="book-author">Patrick Rothfuss</p>
+              <p class="book-price">R$ 49,90</p>
+              <button class="book-btn">Comprar</button>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-cover">Capa do Livro</div>
+            <div class="book-info">
+              <h3 class="book-title">Cem Anos de Solidão</h3>
+              <p class="book-author">Gabriel García Márquez</p>
+              <p class="book-price">R$ 39,90</p>
+              <button class="book-btn">Comprar</button>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-cover">Capa do Livro</div>
+            <div class="book-info">
+              <h3 class="book-title">1984</h3>
+              <p class="book-author">George Orwell</p>
+              <p class="book-price">R$ 29,90</p>
+              <button class="book-btn">Comprar</button>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-cover">Capa do Livro</div>
+            <div class="book-info">
+              <h3 class="book-title">O Hobbit</h3>
+              <p class="book-author">J.R.R. Tolkien</p>
+              <p class="book-price">R$ 45,90</p>
+              <button class="book-btn">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter">
+        <h3>Assine nossa newsletter</h3>
+        <p>
+          Receba atualizações sobre lançamentos, promoções e conteúdos
+          exclusivos diretamente no seu e-mail.
+        </p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Seu melhor e-mail" required />
+          <button type="submit">Assinar</button>
+        </form>
+      </section>
+
+      <section>
+        <h2 class="section-title">Mais Vendidos</h2>
+        <div class="books-grid">
+          <div class="book-card">
+            <div class="book-cover">Capa do Livro</div>
+            <div class="book-info">
+              <h3 class="book-title">A Revolução dos Bichos</h3>
+              <p class="book-author">George Orwell</p>
+              <p class="book-price">R$ 24,90</p>
+              <button class="book-btn">Comprar</button>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-cover">Capa do Livro</div>
+            <div class="book-info">
+              <h3 class="book-title">O Pequeno Príncipe</h3>
+              <p class="book-author">Antoine de Saint-Exupéry</p>
+              <p class="book-price">R$ 19,90</p>
+              <button class="book-btn">Comprar</button>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-cover">Capa do Livro</div>
+            <div class="book-info">
+              <h3 class="book-title">Dom Quixote</h3>
+              <p class="book-author">Miguel de Cervantes</p>
+              <p class="book-price">R$ 59,90</p>
+              <button class="book-btn">Comprar</button>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-cover">Capa do Livro</div>
+            <div class="book-info">
+              <h3 class="book-title">Harry Potter e a Pedra Filosofal</h3>
+              <p class="book-author">J.K. Rowling</p>
+              <p class="book-price">R$ 34,90</p>
+              <button class="book-btn">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="quarto-container">
+        <div class="quarto-conteudo-escrito">
+          <h2>Entre em contato conosco</h2>
+        </div>
+
+        <form>
+          <div id="nomeEmail">
+            <div id="nome">
+              <h3>Nome</h3>
+              <input required type="text" placeholder="Ex:Victor" />
+            </div>
+            <!--nome-->
+
+            <div id="email">
+              <h3>Email</h3>
+              <input
+                required
+                type="email"
+                placeholder="Ex:email@seuemail.com"
+              />
+            </div>
+          </div>
+          <!--email usuário-->
+
+          <div id="descricao">
+            <h3>Descrição</h3>
+            <input required type="text" />
+          </div>
+          <!--descrição do usuário-->
+
+          <div class="botao-formulario">
+            <button type="submit" class="btn-form">ENVIAR</button>
+          </div>
+          <!--botao-formulario-->
+        </form>
+      </section>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>Sobre Nós</h4>
+          <ul class="footer-links">
+            <li><a href="#">Nossa História</a></li>
+            <li><a href="#">Missão e Valores</a></li>
+            <li><a href="#">Trabalhe Conosco</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Ajuda</h4>
+          <ul class="footer-links">
+            <li><a href="#">Dúvidas Frequentes</a></li>
+            <li><a href="#">Entregas e Prazos</a></li>
+            <li><a href="#">Trocas e Devoluções</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contato</h4>
+          <ul class="footer-links">
+            <li><a href="#">Fale Conosco</a></li>
+            <li><a href="#">Lojas Físicas</a></li>
+            <li><a href="#">Redes Sociais</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Formas de Pagamento</h4>
+          <ul class="footer-links">
+            <li><a href="#">Cartões de Crédito</a></li>
+            <li><a href="#">Boleto Bancário</a></li>
+            <li><a href="#">PIX</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2023 Livraria XYZ - Todos os direitos reservados</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

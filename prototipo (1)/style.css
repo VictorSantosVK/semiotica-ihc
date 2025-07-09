@@ -1,0 +1,459 @@
+:root {
+  --trust-blue: #2c5e92; /* Azul para confiança/credibilidade */
+  --light-blue: #e1f0fa; /* Azul claro para elementos secundários */
+  --creative-yellow: #f7d56a; /* Amarelo para estímulo intelectual */
+  --accent-orange: #e67e22; /* Laranja para destaques criativos */
+  --warm-beige: #f5f0e8; /* Bege para acolhimento/leitura */
+  --action-red: #c0392b; /* Vermelho para CTAs (com moderação) */
+  --text-dark: #2c3e50; /* Cor escura para texto */
+  --text-light: #7f8c8d; /* Cor clara para texto secundário */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Georgia", serif; /* Fonte mais literária */
+}
+
+body {
+  background-color: var(--warm-beige);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--trust-blue);
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.logo span {
+  color: var(--creative-yellow);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+  padding: 0.3rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+  color: var(--creative-yellow);
+  border-bottom-color: var(--creative-yellow);
+}
+
+.search-bar {
+  display: flex;
+  margin: 1rem auto;
+  max-width: 1200px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  font-size: 1rem;
+  background-color: white;
+}
+
+.search-bar button {
+  background-color: var(--trust-blue);
+  color: white;
+  border: none;
+  padding: 0 1.5rem;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: 1px solid var(--trust-blue);
+}
+
+.search-bar button:hover {
+  background-color: #1d4b7b;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.hero {
+  background: linear-gradient(
+    135deg,
+    var(--trust-blue) 0%,
+    var(--light-blue) 100%
+  );
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--action-red);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 2;
+  border: 2px solid var(--action-red);
+}
+
+.btn:hover {
+  background-color: #a5281b;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border-color: white;
+  margin-left: 1rem;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--trust-blue);
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--creative-yellow);
+  display: inline-block;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.book-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+  border: 1px solid #e0e0e0;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.book-cover {
+  height: 300px;
+  background-color: var(--light-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--trust-blue);
+  position: relative;
+}
+
+.book-cover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--creative-yellow);
+}
+
+.book-info {
+  padding: 1.2rem;
+}
+
+.book-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+  font-weight: bold;
+}
+
+.book-author {
+  color: var(--text-light);
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.book-price {
+  font-weight: bold;
+  color: var(--trust-blue);
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.book-btn {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+  background-color: var(--trust-blue);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.book-btn:hover {
+  background-color: #1d4b7b;
+}
+
+.newsletter {
+  background-color: var(--light-blue);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.newsletter h3 {
+  color: var(--trust-blue);
+  margin-bottom: 1rem;
+}
+
+.newsletter p {
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  font-size: 1rem;
+}
+
+.newsletter-form button {
+  background-color: var(--accent-orange);
+  color: white;
+  border: none;
+  padding: 0 1.5rem;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+  background-color: #d35400;
+}
+
+/*Section de contatos*/
+.quarto-container {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 4px;
+}
+
+.btn-form {
+  display: inline-block;
+  background-color: var(--action-red);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 2;
+  border: 2px solid var(--action-red);
+}
+
+.btn-form:hover {
+  background-color: #a5281b;
+  transform: translateY(-2px);
+}
+
+.btn-form {
+  background-color: ;
+  border-color: white;
+  margin-left: 1rem;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.botao-formulario {
+	margin: 15px;
+}
+
+/*formatação do formulário*/
+.formulario {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+}
+
+div#nomeEmail {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+div#nome>input,
+div#email>input {
+	width: 25vw;
+	height: 6vh;
+	border-radius: 10px;
+}
+
+div#descricao>input {
+	width: 50vw;
+	height: 15vh;
+	border-radius: 10px;
+	margin: 5px;
+}
+
+
+/*footer*/
+
+footer {
+  background-color: var(--trust-blue);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  text-align: left;
+}
+
+.footer-column h4 {
+  color: var(--creative-yellow);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--creative-yellow);
+  text-decoration: underline;
+}
+.footer-links a:focus,
+.footer-links a:active {
+  outline: 2px solid var(--creative-yellow);
+  outline-offset: 2px;
+}
+
+.copyright {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+
+  .newsletter-form button {
+    padding: 0.7rem;
+  }
+}
